@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Expense Tracker</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="container mt-4">
+      <h2>Expense Tracker</h2>
+      <form id="expenseForm" class="mb-3">
+        <div class="form-group">
+          <label for="expenseName">Expense Name:</label>
+          <input type="text" class="form-control" id="expenseName" required />
+        </div>
+        <div class="form-group">
+          <label for="expenseAmount">Expense Amount:</label>
+          <input
+            type="number"
+            class="form-control"
+            id="expenseAmount"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Add Expense</button>
+        <button
+          type="button"
+          id="updateExpenseBtn"
+          class="btn btn-primary"
+          style="display: none"
+        >
+          Update Expense
+        </button>
+        <button
+          type="button"
+          id="cancelExpenseBtn"
+          class="btn btn-secondary"
+          style="display: none"
+        >
+          Cancel
+        </button>
+      </form>
+      <table id="expenseTable" class="table">
+        <thead>
+          <tr>
+            <th>Expense Name</th>
+            <th>Expense Amount</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <button id="clearExpensesBtn" class="btn btn-danger">
+        Clear All Expenses
+      </button>
+    </div>
+
+    <script src="./Expense-tracker-app- local-storage.js"></script>
+  </body>
+</html>
